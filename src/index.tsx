@@ -2,7 +2,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
 import { store } from "./redux/features/store";
-import App from "./App/App";
+import App from "./components/App/App";
 import reportWebVitals from "./reportWebVitals";
 import "papercss/dist/paper.min.css";
 

@@ -5,10 +5,16 @@ const AppStyled = styled.header`
     padding-top: 15px;
   }
 
+  .margin-large {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
   .title {
-    font-size: 1.2rem;
+    font-size: 1.7rem;
+    font-weight: bold;
     text-align: center;
-    margin-bottom: 10px;
+    margin: 0 0 10px 0;
   }
 `;
 export default AppStyled;
