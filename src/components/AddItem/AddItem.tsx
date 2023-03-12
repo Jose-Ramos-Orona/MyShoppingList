@@ -2,6 +2,7 @@ import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import useList from "../../hooks/useList/useList";
 import Item from "../../types/types";
+import AddItemStyled from "./AddItemStyled";
 
 const AddItem = (): JSX.Element => {
   const { setLocalStorageList } = useList();
@@ -20,22 +21,28 @@ const AddItem = (): JSX.Element => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        placeholder="Add Item"
-        type="text"
-        value={name}
-        onChange={(event) => setName(event.target.value)}
-      />
+    <AddItemStyled>
+      <form onSubmit={handleSubmit} className="main-form">
+        <input
+          className="margin-top-small"
+          placeholder="Add Item"
+          type="text"
+          value={name}
+          onChange={(event) => setName(event.target.value)}
+        />
 
-      <input
-        placeholder="Quantity"
-        type="number"
-        value={quantity}
-        onChange={(event) => setQuantity(Number(event.target.value))}
-      />
-      <button type="submit">Add Item</button>
-    </form>
+        <input
+          className="margin-top-small"
+          placeholder="Quantity"
+          type="number"
+          value={quantity}
+          onChange={(event) => setQuantity(Number(event.target.value))}
+        />
+        <button className="paper-btn btn-small margin-top-small" type="submit">
+          Add Item
+        </button>
+      </form>
+    </AddItemStyled>
   );
 };
 
