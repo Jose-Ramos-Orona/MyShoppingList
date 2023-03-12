@@ -21,7 +21,7 @@ const listSlice = createSlice({
 
     setList: (state, action: PayloadAction<any>) => {
       state.data = action.payload;
-      localStorage.setItem("myData", JSON.stringify(action.payload));
+      localStorage.setItem("items", JSON.stringify(action.payload));
     },
 
     clearList: (state) => {
